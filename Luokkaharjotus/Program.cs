@@ -11,7 +11,7 @@ namespace Luokkaharjotus
             tyypit.Add(new Person("Matti", 30, 900));
             tyypit.Add(new Person("Timo", 26, 1300));
             tyypit.Add(new Person("Toni", 34, 2100));
-            
+
             foreach (var dude in tyypit)
             {
                 Console.WriteLine($"nimi: {dude.name} ikä: {dude.age} palkka: {dude.salary}");
@@ -24,15 +24,16 @@ namespace Luokkaharjotus
             }
             Console.WriteLine(yhteinenikä);
             
-            /*Person person1 = new Person();
+            Person person1 = new Person();
             Person person2 = new Person();
             Person person3 = new Person();
             Person person4 = new Person("Mikko", 38);
             Person person5 = new Person("Tommi", 41);
-            Person ystävä1 = new Person();
-            Person ystävä2 = new Person();
-            Person ystävä3 = new Person();
-
+            Person ystävä1 = new Person("Pekka");
+            Person ystävä2 = new Person("Juuso");
+            Person ystävä3 = new Person("Antti");
+            ystävä1.friend = ystävä3;
+            ystävä3.friend = ystävä2;
 
             person1.name = "Pauli";
             person1.name = "Matti";
@@ -66,8 +67,10 @@ namespace Luokkaharjotus
 
             Console.WriteLine($"{person4.name} {person4.age}");
             Console.WriteLine($"{person5.name} {person5.age}");
-            Console.WriteLine($"{Pekka.friend} {Antti.friend}");
-            */
+
+            Console.WriteLine($"{ystävä1.name} kaveinaan hänellä onpi: { ystävä1.friend.name}");
+            Console.WriteLine($"{ystävä3.name} kaveinaan hänellä onpi: { ystävä3.friend.name}");
+
         }
     }
 }

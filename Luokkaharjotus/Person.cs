@@ -11,28 +11,28 @@ namespace Luokkaharjotus
         public int salary;
         public Person friend;
 
-        public Person(string name, int age, int salary)
+        public Person(string aName, int aAge, int aSalary)
+        {
+            this.name = aName;
+            this.age = aAge;
+            this.salary = aSalary;
+        }
+
+        public Person()
+        {
+
+        }
+
+        public Person(string name)
+        {
+            this.name = name;
+        }
+
+        public Person(string name, int age)
         {
             this.name = name;
             this.age = age;
-            this.salary = salary;
         }
-
-        //public Person()
-        //{
-
-        //}
-
-        //public Person (Person friend)
-        //{
-        //    this.friend = friend;
-        //}
-
-        //public Person (string name, int age)
-        //{
-        //    this.name = name;
-        //    this.age = age;
-        //}
     }
     
 }
